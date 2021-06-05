@@ -1,0 +1,168 @@
+/*Inicio colores generales del sitio*/
+:root , :root.snow-white {
+    --color-html: #0e0b0b;
+    --color-body: #ffffff;
+    --color-text: #1f1f1f;
+    --color-disabled: #5f5e5e;
+    --color-link: #e57373;
+    --color-selected-text: #73b7e5;
+    --color-selected-bg: #CF7;
+    --color-content: var(--color-body);
+    --color-shadow: rgba(111, 111, 111, 0.38);
+}
+
+html.dark {
+    --color-html: #0e0b0b;
+    --color-body: #121212;
+    --color-text: #d1d1d1;
+    --color-disabled: #acacac;
+    --color-link: #e57373;
+    --color-selected-text: #000;
+    --color-selected-bg: #CF7;
+    --color-content: var(--color-body);
+    --color-shadow: rgba(209, 209, 209, 0.5);
+}
+
+html { background: var(--color-html); }
+
+body {
+    background: var(--color-body);
+    color: var(--color-text);
+}
+
+.disabled {
+    color: var(--color-disabled);
+}
+
+input {
+    color: var(--color-text);
+}
+
+.select-dropdown li.disabled, .select-dropdown li.disabled > span, .select-dropdown li.optgroup{
+    color: var(--color-text);
+    background-color: var(--color-body);
+}
+
+.card {
+    background-color: var(--color-body);
+    border-radius: 2px;
+    border-color: var(--color-shadow);
+    box-shadow: 0 2px 2px 0 var(--color-shadow),
+                0 3px 1px -2px var(--color-shadow),
+                0 1px 5px 0 var(--color-shadow);
+    -webkit-box-shadow: 0 2px 2px 0 var(--color-shadow),
+                        0 3px 1px -2px var(--color-shadow),
+                        0 1px 5px 0 var(--color-shadow);
+}
+
+.card-panel{
+    background-color: var(--color-body);
+    border-radius: 2px;
+    border-color: var(--color-shadow);
+    box-shadow: 0 2px 2px 0 var(--color-shadow),
+    0 3px 1px -2px var(--color-shadow),
+    0 1px 5px 0 var(--color-shadow);
+    -webkit-box-shadow: 0 2px 2px 0 var(--color-shadow),
+    0 3px 1px -2px var(--color-shadow),
+    0 1px 5px 0 var(--color-shadow);
+}
+
+.collection .collection-item {
+    background-color: var(--color-body);
+}
+
+.dropdown-content li{
+    color: var(--color-text);
+    background-color: var(--color-content);
+}
+
+/*Fin colores generales del sitio*/
+
+.textoJustificado {
+    text-align: justify;
+}
+
+.tituloParrafo {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.contenedorFotoCarrusel {
+    overflow: hidden;
+}
+
+.fotoCarrusel {
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 100%;
+}
+
+.fotoCard{
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: 100%;
+}
+
+.iconColor {
+    color: #e57373;
+}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+
+  /* Set a specific color for each brand */
+
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+  /* Twitter */
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  .fa-instagram{
+      background:rgb(209, 34, 186);
+      color: white;
+
+  }
+
+.parallax-container .parallax {
+      position: absolute;
+      z-index: 1;
+}
+
+.parallaxContent {
+    position: relative;
+    z-index: 2;
+}
+
+.nombrePerfil {
+    color: #e57373;
+    text-align: left;
+}
+
+
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after {
+    background-color:rgb(255, 0, 0);
+}
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:before,
+[type="radio"].with-gap:checked+span:after {
+    border: 2px solid rgb(255, 0, 0);
+}

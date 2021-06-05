@@ -1,0 +1,35 @@
+
+<!-- inicio navbar -->
+<nav class="black" role="navigation">
+    <div class="nav-wrapper container">
+        <a id="logo-container"  href="{% url 'index.html' %}" class="brand-logo white-text">
+            <span class="iconify iconColor" data-icon="mdi-penguin" data-inline="false"></span>
+        </a>
+        <ul class="right hide-on-med-and-down">
+            <li><a class="white-text" href="{% url 'index.html' %}">Principal</a></li>
+            <li><a class="white-text" href="{% url 'catalogo.html' %}">Galería</a></li>
+            <li><a class="white-text" href="{% url 'quienessomos.html' %}">Nosotros</a></li>
+            <li><a class="pink-text" href="{% url 'registro.html' %}">Regístrate</a></li>
+            <li>
+                <a  onclick="DualFlipClassSwitch('html', 'dark', 'snow-white', 'ColorMode');">
+                    <i class="material-icons iconColor">brightness_4</i>
+                </a>
+            </li>
+        </ul>
+        <!-- navbar mobile, llama al menu de hamburgesa -->
+        <ul id="nav-mobile" class="sidenav red lighten-2">
+            <li><a class="white-text" href="{% url 'index.html' %}">Principal</a></li>
+            <li><a class="white-text" href="{% url 'catalogo.html' %}">Galería</a></li>
+            <li><a class="white-text" href="{% url 'quienessomos.html' %}">Nosotros</a></li>
+            <li><a class="white-text" href="{% url 'registro.html' %}">Regístrate</a></li>
+            <li>
+                <a class="white-text" onclick="DualFlipClassSwitch('html', 'dark', 'snow-white', 'ColorMode');">
+                    Modo Claro/Oscuro
+                </a>
+            </li>
+        </ul>
+        <a  href="{% url 'index.html' %}" data-target="nav-mobile" class="sidenav-trigger"><i
+                class="material-icons iconColor">menu</i></a>
+    </div>
+</nav>
+<!-- fin del navbar -->
