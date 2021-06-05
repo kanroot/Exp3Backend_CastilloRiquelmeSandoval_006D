@@ -9,7 +9,7 @@ class CreatorUser(AbstractUser):
     email = models.EmailField(verbose_name='Correo electronico', unique=True)
     bio = models.TextField(verbose_name='Bio', max_length=280, blank=True, default='Perrito')
     pin = models.IntegerField(verbose_name='Pins', blank=True, default=0)
-    banner = models.ImageField(blank=True, null=True)
+    banner = models.ImageField(upload_to='pinwin.ImageFile/bytes/filename/mimetype', blank=True, null=True)
 
 
 class CreatorImage(models.Model):
@@ -18,3 +18,8 @@ class CreatorImage(models.Model):
     descr = models.TextField(blank=True, default='Perrito')
     user = models.ForeignKey(CreatorUser, on_delete=models.CASCADE)
 
+
+class ImageFile(models.Model):
+    bytes = models.TextField()
+    filename = models.CharField(max_length=255)
+    mimetype = models.CharField(max_length=50)
