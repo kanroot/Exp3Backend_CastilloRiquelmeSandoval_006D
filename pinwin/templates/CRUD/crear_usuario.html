@@ -11,18 +11,8 @@
         </div>
     <form method="post" action="#" id="formulario">
         {% csrf_token %}
-        <div class="form-row">
-            {{ form.username.label }}
-            {{ form.username }}
-        </div>
-        <div class="form-row">
-            {{ form.email.label }}
-            {{ form.email }}
-        </div>
-        <div class="form-row">
-            {{ form.bio.label }}
-            {{ form.bio }}
-        </div>
+        {{ form.as_p }}
+
         <div class="form-group">
             <input type="submit" class="btn btn-danger" id="enviar" value="Enviar">
             <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar">

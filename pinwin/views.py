@@ -1,11 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import CreatorUser
-from .forms import CreatorUserForm
-from django.http import HttpResponse
-
-
-
-# Create your views here.
+from .forms import CreatorUserForm, CreatorUserChangeForm
 
 
 def index(request):
@@ -59,11 +54,11 @@ def crud_modificar_usuario(request, username):
     user = CreatorUser.objects.get(username=username)
 
     data = {
-        'form': CreatorUserForm(instance=user)
+        'form': CreatorUserChangeForm(instance=user)
     }
 
     if request.method == 'POST':
-        formulario = CreatorUserForm(data=request.POST, instance=user)
+        formulario = CreatorUserChangeForm(data=request.POST, instance=user)
 
         if formulario.is_valid:
             formulario.save()
