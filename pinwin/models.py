@@ -6,10 +6,22 @@ from django.contrib.auth.models import AbstractUser
 
 class CreatorUser(AbstractUser):
     username = models.CharField(verbose_name='Nombre de usuario', max_length=25, primary_key=True)
-    email = models.EmailField(verbose_name='Correo electronico', unique=True)
+    email = models.EmailField(verbose_name='Correo electronico', null=False, unique=True)
     bio = models.TextField(verbose_name='Bio', max_length=280, blank=True, default='Perrito')
-    pin = models.IntegerField(verbose_name='Pins', blank=True, default=0)
     banner = models.ImageField(upload_to='pinwin.ImageFile/bytes/filename/mimetype', blank=True, null=True)
+
+
+class PinRelationship(models.Model):
+    pinner_id = models.ForeignKey(CreatorUser, related_name='pinnedBy', on_delete=models.CASCADE)
+    pinned_id = models.ForeignKey(CreatorUser, related_name='pins', on_delete=models.CASCADE)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=['pinner_id', 'pinned_id'], name='unique_const')
+        ]
+
+    def __str__(self):
+        return 'usuario ' + self.pinner_id.username + ' sigue a '+ self.pinned_id.username
 
 
 class CreatorImage(models.Model):
