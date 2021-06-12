@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+        <div class="row">
+            <h1>Creando Vehiculos</h1>
+        </div>
+    <form method="post" action="#" id="formulario">
+        {% csrf_token %}
+        <div class="form-row">
+            {{ form.username.label }}
+            {{ form.username }}
+        </div>
+        <div class="form-row">
+            {{ form.email.label }}
+            {{ form.email }}
+        </div>
+        <div class="form-row">
+            {{ form.bio.label }}
+            {{ form.bio }}
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-danger" id="enviar" value="Enviar">
+            <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar">
+        </div>
+    </form>
+    {{ mensaje }}
+</div>
+</body>
+</html>
