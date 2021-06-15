@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<div class="container">
-        <div class="row">
-            <h1>Modificar usuario</h1>
-        </div>
+{% extends 'CRUD/crud_base.html' %}
+{% block titulo %}CRUD - Modificar usuario{% endblock %}
+{% block cabecera %}Modificar usuario{% endblock %}
+{% block contenido %}
     <form method="post" action="#" id="formulario">
         {% csrf_token %}
 
@@ -26,6 +19,4 @@
         </div>
     </form>
     {{ mensaje }}
-</div>
-</body>
-</html>
+{% endblock %}

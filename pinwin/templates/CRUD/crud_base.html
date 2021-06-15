@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>{% block titulo %}{% endblock %}</title>
+    {% load static %}
+    <link href="{% static 'css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="{% static 'css/estilos.css' %}" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <div class="nav-wrapper container">
+      <a id="logo-container"  href="{% url 'index.html' %}" class="brand-logo white-text">
+            <span class="iconify" data-icon="mdi-penguin" data-inline="false"></span>
+      </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="{% url 'ver_usuarios.html' %}">Ver</a></li>
+        <li><a href="{% url 'crear_usuario.html' %}">Crear</a></li>
+      </ul>
+    </div>
+  </nav>
+
+<div class="container">
+    <div class="row">
+        <h1>{% block cabecera %}{% endblock %}</h1>
+    </div>
+</div>
+<div class="container">
+    {% block contenido %}
+    {% endblock %}
+    <br>
+    <br>
+    <br>
+</div>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="{% static 'js/materialize.js' %}"></script>
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<script async type="text/javascript" src="{% static 'js/darkmode.js' %}"></script>
+</body>
+<footer class="page-footer red lighten-2">
+    <div class="container">
+        <div class="row">
+            <div class="col l12 s12">
+                <h5 class="white-text">Redes sociales</h5>
+                <div class="row">
+                    <p>Síguenos en nuestras redes sociales para más información</p>
+
+                    <a href="https://www.facebook.com/" class="fa fa-facebook "></a>
+                    <a href="https://twitter.com/" class="fa fa-twitter  "></a>
+                    <a href="https://www.instagram.com/" class="fa fa-instagram  "></a>
+
+                </div>
+                <div class="row">
+                    <a class="white-text" href="{% url 'contacto.html' %}">Contáctanos</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            &copy; <a class="white-text text-lighten-3">Andrés Riquelme, Roberto
+            Castillo y Sebastián Sandoval.Todos los derechos reservados</a>
+        </div>
+    </div>
+</footer>
+</html>

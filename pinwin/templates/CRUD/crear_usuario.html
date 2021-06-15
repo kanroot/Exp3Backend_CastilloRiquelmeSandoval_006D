@@ -1,24 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<div class="container">
-        <div class="row">
-            <h1>Creando Usuarios</h1>
-        </div>
+{% extends 'CRUD/crud_base.html' %}
+{% block titulo %}CRUD - Crear usuario{% endblock %}
+{% block cabecera %}Creando usuario{% endblock %}
+{% block contenido %}
     <form method="post" action="#" id="formulario">
         {% csrf_token %}
         {{ form.as_p }}
 
-        <div class="form-group">
+        <div class="form-row">
             <input type="submit" class="btn btn-danger" id="enviar" value="Enviar">
             <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar">
         </div>
     </form>
     {{ mensaje }}
-</div>
-</body>
-</html>
+{% endblock %}
