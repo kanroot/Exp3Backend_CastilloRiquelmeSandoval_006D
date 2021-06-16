@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="es">
+{% extends 'base.html' %}
 {% load static %}
-{% include 'header.html' %}
-<body>
-{% include 'navbar.html' %}
-
+{% block titulo %}PinWin - AsukaNemu{% endblock %}
+{% block contenido %}
 <!-- comienzo del contenido -->
 <div class="parallax-container">
     <div class="row">
@@ -201,11 +198,4 @@
 </div>
 <!-- fin destacados -->
 
-<!--  Scripts-->
-{% include 'scripts.html' %}
-{% include 'footer.html' %}
-
-</body>
-
-
-</html>
+{% endblock %}

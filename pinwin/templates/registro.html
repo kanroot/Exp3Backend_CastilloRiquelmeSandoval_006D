@@ -1,226 +1,141 @@
-<!DOCTYPE html>
-<html lang="es" xmlns="http://www.w3.org/1999/html">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>PinWin</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="css/estilos.css" type="text/css" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-<!-- inicio navbar -->
-<nav class="black" role="navigation">
-    <div class="nav-wrapper container">
-        <a id="logo-container" href="index.html" class="brand-logo white-text">
-            <span class="iconify iconColor" data-icon="mdi-penguin" data-inline="false"></span>
-        </a>
-        <ul class="right hide-on-med-and-down">
-            <li><a class="white-text" href="index.html">Principal</a></li>
-            <li><a class="white-text" href="catalogo.html">Galería</a></li>
-            <li><a class="white-text" href="quienessomos.html">Nosotros</a></li>
-            <li><a class="pink-text" href="registro.html">Regístrate</a></li>
-            <li>
-                <a onclick="DualFlipClassSwitch('html', 'dark', 'snow-white', 'ColorMode');">
-                    <i class="material-icons iconColor">brightness_4</i>
-                </a>
-            </li>
-        </ul>
-        <!-- navbar mobile, llama al menu de hamburgesa -->
-        <ul id="nav-mobile" class="sidenav red lighten-2">
-            <li><a class="white-text" href="index.html">Principal</a></li>
-            <li><a class="white-text" href="catalogo.html">Galería</a></li>
-            <li><a class="white-text" href="quienessomos.html">Nosotros</a></li>
-            <li><a class="white-text" href="registro.html">Regístrate</a></li>
-            <li>
-                <a class="white-text" onclick="DualFlipClassSwitch('html', 'dark', 'snow-white', 'ColorMode');">
-                    Modo Claro/Oscuro
-                </a>
-            </li>
-        </ul>
-        <a href="index.html" data-target="nav-mobile" class="sidenav-trigger"><i
-                class="material-icons iconColor">menu</i></a>
-    </div>
-</nav>
-<!-- fin del navbar -->
-<!-- comienzo del contenido -->
+{% extends 'base.html' %}
+{% block titulo %}PinWin - Registro{% endblock %}
+{% load static %}
 
-<div class="container-fluid col s12 m12 l12 xl12">
-
-    <div class="divider"></div>
-    <div class="container section">
-        <h3 class="center-align tituloParrafo">Regístrate en PinWin</h3>
-        <div class="row">
-            <form class="col s12" action="index.html">
-                <div class="row">
-                    <div class="input-field col s12 m6 l6 xl6">
-                        <i class="material-icons prefix">face</i>
-                        <input placeholder="Pedro" id="first_name" type="text" class="validate" maxlength="32"
-                               required="" aria-required="true"
-                               pattern="[A-Za-z]{3,32}">
-                        <label for="first_name">Primer nombre</label>
-                        <span class="helper-text" data-error="Ingrese un nombre válido.">
-                              </span>
-                    </div>
-                    <div class="input-field col s12 m6 l6 xl6">
-                        <i class="material-icons prefix">face</i>
-                        <!-- validacion para apellidos, incluye a manera opcional la posibilidad del espacio-->
-                        <input placeholder="Salas Contreras" id="last_name" type="text" class="validate" maxlength="50"
-                               required="" aria-required="true"
-                               pattern="[A-Za-z\s*]{1,32}">
-                        <label for="last_name">Apellidos</label>
-                        <span class="helper-text" data-error="Ingrese un apellido válido.">
-                              </span>
-                    </div>
+{% block contenido %}
+<div class="divider"></div>
+<div class="container section">
+    <h3 class="center-align tituloParrafo">Regístrate en PinWin</h3>
+    <div class="row">
+        <form class="col s12" action="index.html">
+            <div class="row">
+                <div class="input-field col s12 m6 l6 xl6">
+                    <i class="material-icons prefix">face</i>
+                    <input placeholder="Pedro" id="first_name" type="text" class="validate" maxlength="32"
+                           required="" aria-required="true"
+                           pattern="[A-Za-z]{3,32}">
+                    <label for="first_name">Primer nombre</label>
+                    <span class="helper-text" data-error="Ingrese un nombre válido.">
+                          </span>
                 </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix">vpn_key</i>
-                        <!-- Minimum eight characters, at least one letter and one number: -->
-                        <input id="password" type="password" class="validate" maxlength="12"
-                               required="" aria-required="true"
-                               pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
-                        <label for="password">Password</label>
-                        <span class="helper-text" data-error="Use a lo menos 8 caracteres con un número incluído.">
-                              </span>
-                    </div>
+                <div class="input-field col s12 m6 l6 xl6">
+                    <i class="material-icons prefix">face</i>
+                    <!-- validacion para apellidos, incluye a manera opcional la posibilidad del espacio-->
+                    <input placeholder="Salas Contreras" id="last_name" type="text" class="validate" maxlength="50"
+                           required="" aria-required="true"
+                           pattern="[A-Za-z\s*]{1,32}">
+                    <label for="last_name">Apellidos</label>
+                    <span class="helper-text" data-error="Ingrese un apellido válido.">
+                          </span>
                 </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix">vpn_key</i>
-                        <input id="passwordConfirm" class="validate" type="password" maxlength="12"
-                               required="" aria-required="true"
-                               pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
-                        <label id="lblPasswordConfirm" for="passwordConfirm">Password (Confirmación)</label>
-                        <span class="helper-text" data-error="Las contraseñas no coinciden.">
-                              </span>
-                    </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">vpn_key</i>
+                    <!-- Minimum eight characters, at least one letter and one number: -->
+                    <input id="password" type="password" class="validate" maxlength="12"
+                           required="" aria-required="true"
+                           pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
+                    <label for="password">Password</label>
+                    <span class="helper-text" data-error="Use a lo menos 8 caracteres con un número incluído.">
+                          </span>
                 </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix">email</i>
-                        <!-- Valido para el 99% de los emails-->
-                        <input placeholder="Email" id="email" type="email" class="validate" required=""
-                               aria-required="true"
-                               pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$">
-                        <label for="email">Email</label>
-                        <span class="helper-text" data-error="Email inválido, ingrese uno válido." data-success="Valido">
-                        </span>
-                    </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">vpn_key</i>
+                    <input id="passwordConfirm" class="validate" type="password" maxlength="12"
+                           required="" aria-required="true"
+                           pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
+                    <label id="lblPasswordConfirm" for="passwordConfirm">Password (Confirmación)</label>
+                    <span class="helper-text" data-error="Las contraseñas no coinciden.">
+                          </span>
                 </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix">flag</i>
-                        <select id="pais">
-                            <option value="1">Chile</option>
-                            <option value="2">USA</option>
-                            <option value="3">Japón</option>
-                            <option value="4">China</option>
-                            <option value="5">Argentina</option>
-                            <option value="6">Brasil</option>
-                        </select>
-                        <label for="pais">País:</label>
-                    </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">email</i>
+                    <!-- Valido para el 99% de los emails-->
+                    <input placeholder="Email" id="email" type="email" class="validate" required=""
+                           aria-required="true"
+                           pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$">
+                    <label for="email">Email</label>
+                    <span class="helper-text" data-error="Email inválido, ingrese uno válido." data-success="Valido">
+                    </span>
                 </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix">flag</i>
-                        <script src="js/valores.js"></script>
-                        <select id="suscripcion" onchange="DropdownCambio(this)">
-                            <option value="free">Free</option>
-                            <option value="silver">Silver</option>
-                            <option value="gold">Gold</option>                           
-                        </select>
-                        <label for="suscripcion">Suscripción</label>
-                    </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">flag</i>
+                    <select id="pais">
+                        <option value="1">Chile</option>
+                        <option value="2">USA</option>
+                        <option value="3">Japón</option>
+                        <option value="4">China</option>
+                        <option value="5">Argentina</option>
+                        <option value="6">Brasil</option>
+                    </select>
+                    <label for="pais">País:</label>
                 </div>
-                <div class="col s12">
-                    <div class="card horizontal">
-                      <div class="card-stacked">
-                        <div class="card-content">
-                            <div class="row">
-                                <div class="col s6">
-                                    <p>Valor:</p>
-                                </div>
-                                <div class="col s6">
-                                    <p id="valordolar">0 USD</p>
-                                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">flag</i>
+                    <script src="{% static 'js/valores.js' %}"></script>
+                    <select id="suscripcion" onchange="DropdownCambio(this)">
+                        <option value="free">Free</option>
+                        <option value="silver">Silver</option>
+                        <option value="gold">Gold</option>
+                    </select>
+                    <label for="suscripcion">Suscripción</label>
+                </div>
+            </div>
+            <div class="col s12">
+                <div class="card horizontal">
+                  <div class="card-stacked">
+                    <div class="card-content">
+                        <div class="row">
+                            <div class="col s6">
+                                <p>Valor:</p>
                             </div>
-                            <div class="row">
-                                <div class="col s6">
-                                    <p>Valor moneda local:</p>
-                                </div>
-                                <div class="col s6">
-                                    <p id="valorclp">0 CLP</p>
-                                </div>
+                            <div class="col s6">
+                                <p id="valordolar">0 USD</p>
                             </div>
                         </div>
-                      </div>
+                        <div class="row">
+                            <div class="col s6">
+                                <p>Valor moneda local:</p>
+                            </div>
+                            <div class="col s6">
+                                <p id="valorclp">0 CLP</p>
+                            </div>
+                        </div>
                     </div>
                   </div>
-                <div>
-                    <div class="row center">
-                        <button id="submit" class="btn-large red lighten-2 waves-effect" type="submit"
-                                name="action" onmouseover="MakePulse(this);" onmouseout="RemovePulse(this);">
-                            Regístrate
-                        </button>
-                    </div>
                 </div>
-            </form>
-        </div>
+              </div>
+            <div>
+                <div class="row center">
+                    <button id="submit" class="btn-large red lighten-2 waves-effect" type="submit"
+                            name="action" onmouseover="MakePulse(this);" onmouseout="RemovePulse(this);">
+                        Regístrate
+                    </button>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
-
-
-<!-- fin destacados -->
-
-<!--  Scripts-->
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="js/materialize.js"></script>
-<script src="js/init.js"></script>
-<script async type="text/javascript" src="js/darkmode.js"></script>
-<script src="js/ValidacionUtils.js"></script>
-<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-
+<script src="{% static  'js/ValidacionUtils.js'%}"></script>
 
 <script>
-    function RemovePulse(ButtonPulse) {
-        ButtonPulse.classList.remove("pulse");
-    }
+function RemovePulse(ButtonPulse) {
+    ButtonPulse.classList.remove("pulse");
+}
 
-    function MakePulse(ButtonPulse) {
-        ButtonPulse.classList.add("pulse");
-    }
+function MakePulse(ButtonPulse) {
+    ButtonPulse.classList.add("pulse");
+}
 </script>
+{% endblock %}
 
-<footer class="page-footer red lighten-2">
-    <div class="container">
-        <div class="row">
-            <div class="col l12 s12">
-                <h5 class="white-text">Redes sociales</h5>
-                <div class="row">
-                    <p>Siguenos en nuestras redes sociales para mas informacion</p>
 
-                    <a href="https://www.facebook.com/" class="fa fa-facebook "></a>
-                    <a href="https://www.instagram.com/" class="fa fa-twitter  "></a>
-                    <a href="https://twitter.com/" class="fa fa-instagram  "></a>
-                </div>
-                <div class="row">
-                    <a class="white-text" href="contacto.html">Contactanos</a>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <div class="footer-copyright">
-        <div class="container">
-            &copy; <a class="white-text text-lighten-3">Andrés Riquelme, Roberto
-            Castillo y Sebastián Sandoval.Todos los derechos reservados</a>
-        </div>
-    </div>
-</footer>
-</body>
-
-</html>

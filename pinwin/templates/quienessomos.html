@@ -1,121 +1,33 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>PinWin</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="css/estilos.css" type="text/css" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-
-<!-- inicio navbar -->
-<nav class="black" role="navigation">
-    <div class="nav-wrapper container">
-        <a id="logo-container" href="index.html" class="brand-logo white-text">
-            <span class="iconify iconColor" data-icon="mdi-penguin" data-inline="false"></span>
-        </a>
-        <ul class="right hide-on-med-and-down">
-            <li><a class="white-text" href="index.html">Principal</a></li>
-            <li><a class="white-text" href="catalogo.html">Galería</a></li>
-            <li><a class="white-text" href="quienessomos.html">Nosotros</a></li>
-            <li><a class="pink-text" href="registro.html">Regístrate</a></li>
-            <li>
-                <a  onclick="DualFlipClassSwitch('html', 'dark', 'snow-white', 'ColorMode');">
-                    <i class="material-icons iconColor">brightness_4</i>
-                </a>
-            </li>
-        </ul>
-        <!-- navbar mobile, llama al menu de hamburgesa -->
-        <ul id="nav-mobile" class="sidenav red lighten-2">
-            <li><a class="white-text" href="index.html">Principal</a></li>
-            <li><a class="white-text" href="catalogo.html">Galería</a></li>
-            <li><a class="white-text" href="quienessomos.html">Nosotros</a></li>
-            <li><a class="white-text" href="registro.html">Regístrate</a></li>
-            <li>
-                <a class="white-text" onclick="DualFlipClassSwitch('html', 'dark', 'snow-white', 'ColorMode');">
-                    Modo Claro/Oscuro
-                </a>
-            </li>
-        </ul>
-        <a href="index.html" data-target="nav-mobile" class="sidenav-trigger"><i
-                class="material-icons iconColor">menu</i></a>
+{% extends 'base.html' %}
+{% block titulo %}Pinwin - Quiénes somos{% endblock %}
+{% block contenido %}
+<div class="divider"></div>
+<div class="container section">
+    <h3 class="center-align tituloParrafo">Quiénes somos</h3>
+    <div class="video-container">
+        <iframe width=100% height=auto src="https://www.youtube.com/embed/lKW0a5kPiH0" frameborder="0"
+                allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
-</nav>
-<!-- fin del navbar -->
-<!-- comienzo del contenido -->
-
-<div class="container-fluid col s12 m12 l12 xl12">
-
-    <div class="divider"></div>
-    <div class="container section">
-        <h3 class="center-align tituloParrafo">Quiénes somos</h3>
-        <div class="video-container">
-            <iframe width=100% height=auto src="https://www.youtube.com/embed/lKW0a5kPiH0" frameborder="0"
-                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-        <p class="flow-text textoJustificado">
-            PinWin nace de la necesidad de crear una comunidad que permita la relación entre creadores y fans, formando
-            una red que fomente la creacion de contenido y la comunicación.
-        </p>
-        <p class="flow-text textoJustificado">
-            En PinWin los creadores publican su contenido y permiten diferentes niveles de acceso, incluyendo el
-            gratuito, para que los diferentes niveles de fans puedan disfrutar de él.
-        </p>
-    </div>
-    <div class="divider"></div>
-    <div class="container section">
-        <h3 class="center-align tituloParrafo">Filosofía de trabajo</h3>
-        <p class="flow-text textoJustificado">
-            Desde nuestra fundación, en marzo de 2021, hemos decidido desarrollar servicios innovadores líderes en su
-            categoría que nos han ayudado a moldear a nuestro sector.
-        </p>
-        <p class="flow-text textoJustificado">
-            Todas nuestras actividades se basan en nuestra filosofía empresarial, que está formada por nuestros 2
-            pilares empresariales que son trabajo colaborativo y gestión de calidad que ayudan a alinear quién es
-            PinWin.
-        </p>
-    </div>
+    <p class="flow-text textoJustificado">
+        PinWin nace de la necesidad de crear una comunidad que permita la relación entre creadores y fans, formando
+        una red que fomente la creacion de contenido y la comunicación.
+    </p>
+    <p class="flow-text textoJustificado">
+        En PinWin los creadores publican su contenido y permiten diferentes niveles de acceso, incluyendo el
+        gratuito, para que los diferentes niveles de fans puedan disfrutar de él.
+    </p>
 </div>
-
-<!--  Scripts-->
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="js/materialize.js"></script>
-<script src="js/init.js"></script>
-<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-<script async type="text/javascript" src="js/darkmode.js"></script>
-
-<footer class="page-footer red lighten-2">
-    <div class="container">
-        <div class="row">
-            <div class="col l12 s12">
-                <h5 class="white-text">Redes sociales</h5>
-                <div class="row">
-                    <p>Síguenos en nuestras redes sociales para más información</p>
-
-                    <a href="https://www.facebook.com/" class="fa fa-facebook "></a>
-                    <a href="https://www.instagram.com/" class="fa fa-twitter  "></a>
-                    <a href="https://twitter.com/" class="fa fa-instagram  "></a>
-                </div>
-                <div class="row">
-                    <a class="white-text" href="contacto.html">Contáctanos</a>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <div class="footer-copyright">
-        <div class="container">
-            &copy; <a class="white-text text-lighten-3">Andrés Riquelme, Roberto
-            Castillo y Sebastián Sandoval.Todos los derechos reservados</a>
-        </div>
-    </div>
-</footer>
-</body>
-
-
-</html>
+<div class="divider"></div>
+<div class="container section">
+    <h3 class="center-align tituloParrafo">Filosofía de trabajo</h3>
+    <p class="flow-text textoJustificado">
+        Desde nuestra fundación, en marzo de 2021, hemos decidido desarrollar servicios innovadores líderes en su
+        categoría que nos han ayudado a moldear a nuestro sector.
+    </p>
+    <p class="flow-text textoJustificado">
+        Todas nuestras actividades se basan en nuestra filosofía empresarial, que está formada por nuestros 2
+        pilares empresariales que son trabajo colaborativo y gestión de calidad que ayudan a alinear quién es
+        PinWin.
+    </p>
+</div>
+{% endblock %}

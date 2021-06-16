@@ -12,15 +12,15 @@ def catalogo(request):
 
 
 def quienessomos(request):
-    return 'quienessomos'
+    return render(request, 'quienessomos.html')
 
 
 def registro(request):
-    return 'registro'
+    return render(request, 'registro.html')
 
 
 def contacto(request):
-    return 'contacto'
+    return render(request, 'contacto.html')
 
 
 def crud_ver_usuario(request):
