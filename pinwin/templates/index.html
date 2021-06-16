@@ -1,205 +1,194 @@
-<!DOCTYPE html>
-<html lang="es">
+{% extends 'base.html' %}
 {% load static %}
-{% include 'header.html' %}
-<body>
-{% include 'navbar.html' %}
-<!-- comienzo del contenido -->
+{% block titulo %}PinWin{% endblock %}
+{% block contenido %}
+<!-- sección 1: bienvenida -->
+<div class="divider"></div>
+<div class="container section">
+    <h3 class="center-align tituloParrafo">PinWin</h3>
+    <p class="flow-text textoJustificado">
+        PinWin es una red de creadores y fans,
+        donde los creadores muestran su contenido y los fans los apoyan.
+    </p>
+</div>
+<!-- fin bienvenida -->
+<!-- inicio destacados -->
+<div class="divider"></div>
+<div class="container section">
+    <h5 class="center-align">Los perfiles con mayor tendencia:</h5>
+</div>
 
-<div class="container-fluid col s12 m12 l12 xl12">
-    <!-- sección 1: bienvenida -->
-    <div class="divider"></div>
-    <div class="container section">
-        <h3 class="center-align tituloParrafo">PinWin</h3>
-        <p class="flow-text textoJustificado">
-            PinWin es una red de creadores y fans,
-            donde los creadores muestran su contenido y los fans los apoyan.
-        </p>
-    </div>
-    <!-- fin bienvenida -->
-    <!-- inicio destacados -->
-    <div class="divider"></div>
-    <div class="container section">
-        <h5 class="center-align">Los perfiles con mayor tendencia:</h5>
-    </div>
+<div class="container">
+    <div class="row">
+        <div class="col s12 m12 l12 x12">
 
-    <div class="container">
-        <div class="row">
-            <div class="col s12 m12 l12 x12">
-
-                <div class="carousel carousel-slider center">
-                    <div class="carousel-fixed-item center">
-                        <a class="btn-floating btn-large waves-effect waves-light red pulse" href="catalogo.html">
-                            <i class="material-icons">push_pin</i>
-                        </a>
-                    </div>
-                    <div class="carousel-item" style="overflow: hidden;" href="#one! ">
-                        <img alt="carrusel asuka 1" class="fotoCarrusel" src="{% static 'img/destacado/1_asuka.jpg' %}">
-                    </div>
-                    <div class="carousel-item" style="overflow: hidden;" href="#one!">
-                        <img alt="carrusel asuka 2" class="fotoCarrusel" src="{% static 'img/destacado/2_asuka.jpg' %}">
-                    </div>
-                    <div class="carousel-item" style="overflow: hidden;" href="#one!">
-                        <img alt="carrusel asuka 3" class="fotoCarrusel" src="{% static 'img/destacado/3_asuka.jpg' %}">
-                    </div>
+            <div class="carousel carousel-slider center">
+                <div class="carousel-fixed-item center">
+                    <a class="btn-floating btn-large waves-effect waves-light red pulse" href="catalogo.html">
+                        <i class="material-icons">push_pin</i>
+                    </a>
                 </div>
-
-                <div class="carousel carousel-slider center">
-                    <div class="carousel-fixed-item center">
-                        <a class="btn-floating btn-large waves-effect waves-light red pulse" href="catalogo.html">
-                            <i class="material-icons">push_pin</i>
-                        </a>
-                    </div>
-                    <div class="carousel-item" style="overflow: hidden;" href="#one!">
-                        <img alt="carrusel gn 1" class="fotoCarrusel" src="{% static 'img/destacado/1_gn.jpg' %}">
-                    </div>
-                    <div class="carousel-item" style="overflow: hidden;" href="#one!">
-                        <img alt="carrusel gn 2" class="fotoCarrusel" src="{% static 'img/destacado/2_gn.jpg' %}">
-                    </div>
-                    <div class="carousel-item" style="overflow: hidden;" href="#one!">
-                        <img alt="carrusel gn 3" class="fotoCarrusel" src="{% static 'img/destacado/3_gn.jpg' %}">
-                    </div>
+                <div class="carousel-item" style="overflow: hidden;" href="#one! ">
+                    <img alt="carrusel asuka 1" class="fotoCarrusel" src="{% static 'img/destacado/1_asuka.jpg' %}">
                 </div>
-
-                <div class="carousel carousel-slider center">
-                    <div class="carousel-fixed-item center">
-                        <a class="btn-floating btn-large waves-effect waves-light red pulse" href="catalogo.html">
-                            <i class="material-icons">push_pin </i>
-                        </a>
-                    </div>
-                    <div class="carousel-item" style="overflow: hidden;" href="#one!">
-                        <img alt="carrusel adam 1" class="fotoCarrusel" src="{% static 'img/destacado/1_adam.jpg' %}">
-                    </div>
-                    <div class="carousel-item" style="overflow: hidden;" href="#one!">
-                        <img alt="carrusel adam 2" class="fotoCarrusel" src="{% static 'img/destacado/2_adam.jpg' %}">
-                    </div>
-                    <div class="carousel-item" style="overflow: hidden;" href="#one!">
-                        <img alt="carrusel adam 3" class="fotoCarrusel" src="{% static 'img/destacado/3_adam.jpg' %}">
-                    </div>
+                <div class="carousel-item" style="overflow: hidden;" href="#one!">
+                    <img alt="carrusel asuka 2" class="fotoCarrusel" src="{% static 'img/destacado/2_asuka.jpg' %}">
                 </div>
-
+                <div class="carousel-item" style="overflow: hidden;" href="#one!">
+                    <img alt="carrusel asuka 3" class="fotoCarrusel" src="{% static 'img/destacado/3_asuka.jpg' %}">
+                </div>
             </div>
+
+            <div class="carousel carousel-slider center">
+                <div class="carousel-fixed-item center">
+                    <a class="btn-floating btn-large waves-effect waves-light red pulse" href="catalogo.html">
+                        <i class="material-icons">push_pin</i>
+                    </a>
+                </div>
+                <div class="carousel-item" style="overflow: hidden;" href="#one!">
+                    <img alt="carrusel gn 1" class="fotoCarrusel" src="{% static 'img/destacado/1_gn.jpg' %}">
+                </div>
+                <div class="carousel-item" style="overflow: hidden;" href="#one!">
+                    <img alt="carrusel gn 2" class="fotoCarrusel" src="{% static 'img/destacado/2_gn.jpg' %}">
+                </div>
+                <div class="carousel-item" style="overflow: hidden;" href="#one!">
+                    <img alt="carrusel gn 3" class="fotoCarrusel" src="{% static 'img/destacado/3_gn.jpg' %}">
+                </div>
+            </div>
+
+            <div class="carousel carousel-slider center">
+                <div class="carousel-fixed-item center">
+                    <a class="btn-floating btn-large waves-effect waves-light red pulse" href="catalogo.html">
+                        <i class="material-icons">push_pin </i>
+                    </a>
+                </div>
+                <div class="carousel-item" style="overflow: hidden;" href="#one!">
+                    <img alt="carrusel adam 1" class="fotoCarrusel" src="{% static 'img/destacado/1_adam.jpg' %}">
+                </div>
+                <div class="carousel-item" style="overflow: hidden;" href="#one!">
+                    <img alt="carrusel adam 2" class="fotoCarrusel" src="{% static 'img/destacado/2_adam.jpg' %}">
+                </div>
+                <div class="carousel-item" style="overflow: hidden;" href="#one!">
+                    <img alt="carrusel adam 3" class="fotoCarrusel" src="{% static 'img/destacado/3_adam.jpg' %}">
+                </div>
+            </div>
+
         </div>
     </div>
-    <div class="divider"></div>
-    <!-- fin destacados -->
+</div>
+<div class="divider"></div>
+<!-- fin destacados -->
 
-    <div class="container section">
-        <h3 class="center-align tituloParrafo">Es más fácil de lo que crees</h3>
-        <p class="flow-text textoJustificado">
-            Únete a nuestra red de Fans de Creadores, Obtén uno de nuestros Niveles de Fans y accede a contenido
-            exclusivo.
-        </p>
-        <div class="container">
+<div class="container section">
+    <h3 class="center-align tituloParrafo">Es más fácil de lo que crees</h3>
+    <p class="flow-text textoJustificado">
+        Únete a nuestra red de Fans de Creadores, Obtén uno de nuestros Niveles de Fans y accede a contenido
+        exclusivo.
+    </p>
+    <div class="container">
 
-            <div class="row">
+        <div class="row">
 
-                <div class="col s12 m4 l4 xl4">
-                    <div class="card large">
+            <div class="col s12 m4 l4 xl4">
+                <div class="card large">
 
-                        <div class="card-content center">
-                            <h5 class=''>Free</h5>
-                        </div>
-                        <div class="card-content center">
-                            <h2 class='flow-text blue-text'><small>$</small>0</h2>
-                        </div>
+                    <div class="card-content center">
+                        <h5 class=''>Free</h5>
+                    </div>
+                    <div class="card-content center">
+                        <h2 class='flow-text blue-text'><small>$</small>0</h2>
+                    </div>
 
-                        <ul class='collection center'>
-                            <li class='collection-item'>
-                                <strong>200 Pines*</strong>
-                            </li>
-                            <li class='collection-item'>
-                                <strong>Acceso a contenido Gratuito</strong>
-                            </li>
-                        </ul>
+                    <ul class='collection center'>
+                        <li class='collection-item'>
+                            <strong>200 Pines*</strong>
+                        </li>
+                        <li class='collection-item'>
+                            <strong>Acceso a contenido Gratuito</strong>
+                        </li>
+                    </ul>
 
-                        <div class="card-content center">
-                            <div class="row">
-                                <div class="col s12">
-                                    <a href="registro.html">
-                                        <button class='btn red lighten-2'>Únete</button>
-                                    </a>
-                                </div>
+                    <div class="card-content center">
+                        <div class="row">
+                            <div class="col s12">
+                                <a href="registro.html">
+                                    <button class='btn red lighten-2'>Únete</button>
+                                </a>
                             </div>
                         </div>
-
                     </div>
+
                 </div>
+            </div>
 
-                <div class="col s12 m4 l4 xl4">
-                    <div class="card large">
+            <div class="col s12 m4 l4 xl4">
+                <div class="card large">
 
-                        <div class="card-content center">
-                            <h5 class=''>Silver</h5>
-                        </div>
-                        <div class="card-content center">
-                            <h2 class='flow-text red-text'><small>$</small>19.99</h2>
-                        </div>
+                    <div class="card-content center">
+                        <h5 class=''>Silver</h5>
+                    </div>
+                    <div class="card-content center">
+                        <h2 class='flow-text red-text'><small>$</small>19.99</h2>
+                    </div>
 
-                        <ul class='collection center'>
-                            <li class='collection-item'>
-                                <strong>Pines Ilimitados*</strong>
-                            </li>
-                            <li class='collection-item'>
-                                <strong>Acceso a contenido gratuito y silver</strong>
-                            </li>
-                        </ul>
-                        <div class="card-content center">
-                            <div class="row">
-                                <div class="col s12">
-                                    <a href="registro.html">
-                                        <button class='btn red lighten-2'>Únete</button>
-                                    </a>
-                                </div>
+                    <ul class='collection center'>
+                        <li class='collection-item'>
+                            <strong>Pines Ilimitados*</strong>
+                        </li>
+                        <li class='collection-item'>
+                            <strong>Acceso a contenido gratuito y silver</strong>
+                        </li>
+                    </ul>
+                    <div class="card-content center">
+                        <div class="row">
+                            <div class="col s12">
+                                <a href="registro.html">
+                                    <button class='btn red lighten-2'>Únete</button>
+                                </a>
                             </div>
                         </div>
-
                     </div>
+
                 </div>
-                <div class="col s12 m4 l4 xl4">
-                    <div class="card large">
+            </div>
+            <div class="col s12 m4 l4 xl4">
+                <div class="card large">
 
-                        <div class="card-content center">
-                            <h5 class=''>Gold</h5>
-                        </div>
-                        <div class="card-content center">
-                            <h2 class='flow-text purple-text '><small>$</small>54.99</h2>
-                        </div>
+                    <div class="card-content center">
+                        <h5 class=''>Gold</h5>
+                    </div>
+                    <div class="card-content center">
+                        <h2 class='flow-text purple-text '><small>$</small>54.99</h2>
+                    </div>
 
-                        <ul class='collection center'>
-                            <li class='collection-item'>
-                                <strong>Pines Ilimitados*</strong>
-                            </li>
-                            <li class='collection-item'>
-                                <strong>Accede a todo el contenido exclusivo</strong>
-                            </li>
-                        </ul>
-                        <div class="card-content center">
-                            <div class="row">
-                                <div class="col s12">
-                                    <a href="registro.html">
-                                        <button class='btn red lighten-2'>Únete</button>
-                                    </a>
-                                </div>
+                    <ul class='collection center'>
+                        <li class='collection-item'>
+                            <strong>Pines Ilimitados*</strong>
+                        </li>
+                        <li class='collection-item'>
+                            <strong>Accede a todo el contenido exclusivo</strong>
+                        </li>
+                    </ul>
+                    <div class="card-content center">
+                        <div class="row">
+                            <div class="col s12">
+                                <a href="registro.html">
+                                    <button class='btn red lighten-2'>Únete</button>
+                                </a>
                             </div>
                         </div>
+                    </div>
 
-                    </div>
                 </div>
-                <div class="container">
-                    <div class="row">
-                        <h6 class="center">
-                            <small>*Cada pin representa a un único usuario.</small>
-                        </h6>
-                    </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <h6 class="center">
+                        <small>*Cada pin representa a un único usuario.</small>
+                    </h6>
                 </div>
             </div>
         </div>
     </div>
 </div>
-{% include 'footer.html' %}
-<!--  Scripts-->
-{% include 'scripts.html' %}
-</body>
-
-</html>
+{% endblock %}
