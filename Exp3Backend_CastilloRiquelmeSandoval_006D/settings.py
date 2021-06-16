@@ -1,4 +1,3 @@
-
 import os
 from pathlib import Path
 
@@ -10,7 +9,7 @@ DEFAULT_FILE_STORAGE = 'db_file_storage.storage.DatabaseFileStorage'
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#texto para encriptar contraseñas
+# texto para encriptar contraseñas
 
 SECRET_KEY = os.getenv('ENV_SECRET_KEY')
 
@@ -18,7 +17,6 @@ SECRET_KEY = os.getenv('ENV_SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
@@ -31,6 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'db_file_storage',
     'pinwin',
+    'rest_framework',
 ]
 
 AUTH_USER_MODEL = "pinwin.CreatorUser"
@@ -66,7 +65,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Exp3Backend_CastilloRiquelmeSandoval_006D.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
@@ -99,7 +97,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -112,7 +109,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
