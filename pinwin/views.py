@@ -2,6 +2,15 @@ from django.shortcuts import render, redirect
 from .models import CreatorUser
 from .forms import CreatorUserForm, CreatorUserChangeForm
 
+'''Rest services'''
+from rest_framework.serializers import Serializer
+from rest_framework import status
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework.parsers import JSONParser
+from django.views.decorators.csrf import csrf_exempt
+from .serializers import CreatorUserSerializador
+
 
 def index(request):
     return render(request, 'index.html')
@@ -74,3 +83,28 @@ def crud_eliminar_usuario(request, username):
     CreatorUser.objects.filter(username=username).delete()
 
     return redirect(crud_ver_usuario)
+
+
+@csrf_exempt
+@api_view(['GET', 'POST'])
+def lista_creatorUser(request):
+    if request.method == 'GET':
+
+        user = CreatorUser.objects.all()
+
+        serializer = CreatorUserSerializador(user, many=True)
+        return Response(serializer.data)
+
+    elif request.method == 'POST':
+
+        data = JSONParser().parse(request)
+
+        serializer = CreatorUserSerializador(data=data)
+
+        if serializer.is_valid():
+
+            serializer.save()
+
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
